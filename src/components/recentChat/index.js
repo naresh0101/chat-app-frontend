@@ -1,8 +1,8 @@
 import React  from "react";
 import { Avatar } from "@material-ui/core";
-
 import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
+import Icons from "../../assets"
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -56,8 +56,8 @@ export default function RecentChat() {
                 <p className="globle-tile chatby">
                    Naresh
                 </p>
-                <p className="text-muted last-chat">
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
+                <p className="text-muted last-chat i_typing">
+                  Hey I'm sending somthing. 
                 </p>
               </div>
             </div>
