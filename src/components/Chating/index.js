@@ -1,6 +1,7 @@
       
 import React, { Fragment } from 'react';
-import Message from '../message';
+import ReceiveMeg from '../receiveMsg';
+import SentMsg from '../sentMsg';
 import YouConnectedOn from '../youConnectedOn';
 
 import "./index.css"
@@ -10,8 +11,15 @@ export default function Chating() {
   return (
     <Fragment>
         <YouConnectedOn />
-        <Message />
-        <Message />
+        <ReceiveMeg />
+        <SentMsg />
+        <ReceiveMeg />
+        <ReceiveMeg />
+        <SentMsg />
+        <SentMsg />
+        <SentMsg />
+
+
     </Fragment>
   )
 
