@@ -1,5 +1,6 @@
       
-import React from 'react';
+import React, { Fragment } from 'react';
+import Message from '../message';
 import YouConnectedOn from '../youConnectedOn';
 
 import "./index.css"
@@ -7,9 +8,11 @@ import "./index.css"
 
 export default function Chating() {
   return (
-    <div>
+    <Fragment>
         <YouConnectedOn />
-    </div>
+        <Message />
+        <Message />
+    </Fragment>
   )
 
 }
