@@ -1,0 +1,21 @@
+.sidebar{
+    background:#f5f7fb;
+    height: 100vh !important;
+}
+.search-form{
+    background-color: #e6ebf5;
+    border-radius: 6px;
+}
+.last-chat{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.border-bottom-1{
+    border-bottom: 0.2px solid #eeeaea;
+}
+.active-chat{
+    background-color: #e6ebf5 ;
+}

@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import AppLayout from "./Applayout"
+import PrivateRoute from './components/PrivateRoute';
+import Login from './container/account/login';
+import Signup  from './container/account/siginup';
+import Dashboard from './container/dashboard';
+import "./index.css"
+
+
+// var authenticated = false;
+// if(localStorage.getItem("token")){
+//   authenticated = true
+// }
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <AppLayout>
+      <Switch>
+        <Route  path="/login" exact component={Login} />
+        <Route  path="/signup" exact component={Signup} />
+        <PrivateRoute  path="/" component={Dashboard} />
+      </Switch>
+    </AppLayout>
+    
   );
 }
 
