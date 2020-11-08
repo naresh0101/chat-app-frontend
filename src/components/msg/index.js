@@ -1,28 +1,25 @@
 import React, { Fragment }  from "react";
-import { Avatar } from "@material-ui/core";
-
+import SendIcon from '@material-ui/icons/Send';import "./index.css"
+import { IconButton } from "@material-ui/core";
+import AttachmentIcon from '@material-ui/icons/Attachment';
+import MoodIcon from '@material-ui/icons/Mood';
 
 export default function Mymessage() {
  
   return (
-    <Fragment>
-    <div className="fixed-bottom">
-        <div className="d-flex justify-content-between recent-chat-box p-2 border-bottom-1 bg-white ">
-        <div className="d-flex justify-content-start">
-           
-            <Avatar alt="Naresh Kumar Gautam" className="m-2" src="tts://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
-            
-            <div className="mt-2">
-              <p className="globle-tile">
-                👋 Logout !
-              </p>
-              <p className="text-muted">
-               naresh@example.com
-              </p>
-            </div>
-          </div>
-      </div>
+      <div className="my_msg_form">
+        <form className="d-flex justify-content-start">
+        <IconButton className="attach-msg-btn mt-2">
+            <MoodIcon className="text-primary"/>
+          </IconButton>
+          <IconButton className="attach-msg-btn mt-2">
+            <AttachmentIcon className="text-primary"/>
+          </IconButton>
+            <input  placeholder="Type you message ..." className="m-2 p-2 sent-msg" />
+          <IconButton className="send-btn mt-2">
+              <SendIcon className="text-white" />
+          </IconButton>
+          </form> 
     </div>
-    </Fragment>
   );
 }

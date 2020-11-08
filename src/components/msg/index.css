@@ -1,0 +1,21 @@
+.sent-msg{
+    width: 88%;
+    height: auto !important;
+    background-color: #e6ebf5 !important;
+    border-radius: 6px;
+}
+.send-btn{
+    background-color: blue !important;
+    width: 36px;
+    height: 36px;
+}
+.my_msg_form{
+    padding:8px;
+    background-color: whitesmoke;
+    height: 14vh;
+    width: 100%;
+   
+}
+.my_msg_form > form{
+    width: 100%;
+}

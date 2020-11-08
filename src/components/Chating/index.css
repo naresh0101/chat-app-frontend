@@ -24,3 +24,19 @@
 .watch-icon{
     font-size: 16px !important;
 }
+.main-contain{
+    width: 100%;
+    height: 86vh;
+}
+.recent_chats{
+    width: 100%;
+    height: 72vh;
+}
+.recent-chat-box{
+    height: 8vh;
+}
+@media only screen and (max-width: 769px) {
+    .recent-chat-box{
+        height: 10vh;
+    }
+  }

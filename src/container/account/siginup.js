@@ -27,7 +27,7 @@ function Signup() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(user)
         };
-      fetch('http://localhost:5000/Signupcustomer', payload)
+      fetch('http://localhost:5000/signup', payload)
           .then(response => response.json())
           .then((data)=>{
             setAlert(data.message)
@@ -63,6 +63,7 @@ function Signup() {
                               </h3>
                             </center>
                            <form onSubmit={SignupForm}>
+                                <input onChange={handleChange} name="name"  placeholder="Full name" type="email" className=" bg-light mt-4 p-2 border-bottom form-control"  />
                                 <input onChange={handleChange} name="email"  placeholder="Email@example.com" type="email" className=" bg-light mt-4 p-2 border-bottom form-control"  />
                                 <input onChange={handleChange}  name="password" placeholder="Password " type="password" className=" bg-light mt-2 p-2 border-bottom form-control"   />
                                 <br/>

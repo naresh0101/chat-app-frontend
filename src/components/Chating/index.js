@@ -9,17 +9,16 @@ import "./index.css"
 
 export default function Chating() {
   return (
-    <Fragment>
-          <YouConnectedOn />
-          <ReceiveMeg />
-          <ReceiveMeg />
-          <ReceiveMeg />
-          <ReceiveMeg />
-          <SentMsg />
-          <SentMsg />
-
-          <SentMsg />
-    </Fragment>
+    <div  className="col-sm-12 hidden-xs overflow-auto main-contain">
+      <YouConnectedOn />
+      <ReceiveMeg />
+      <ReceiveMeg />
+      <ReceiveMeg />
+      <ReceiveMeg />
+      <SentMsg />
+      <SentMsg />
+      <SentMsg />
+    </div>
   )
 
 }

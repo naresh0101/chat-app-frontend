@@ -4,7 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 export default function SearchUserForm() {
 
   return (
-      <div className="p-4 fixed bg-cream">
+      <div className="p-4">
           <h4 className="text-gray globle-tile">Chats</h4>
           <form className="search-form pl-3 p-2 mt-4">
               <SearchIcon className="text-muted" />

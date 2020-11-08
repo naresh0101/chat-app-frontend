@@ -27,7 +27,7 @@ function Login() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(user)
         };
-      fetch('http://localhost:5000/logincustomer', payload)
+      fetch('http://localhost:5000/login', payload)
           .then(response => response.json())
           .then((data)=>{
             setAlert(data.message)

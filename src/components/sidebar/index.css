@@ -1,6 +1,16 @@
 .sidebar{
-    background:#f5f7fb;
-    height: 100vh !important;;
+    /* background:#f5f7fb; */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+}
+.sidecontainer{
+    padding: 0 !important;
 }
 .bg-cream{
     background:#f5f7fb;

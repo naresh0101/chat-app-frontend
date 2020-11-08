@@ -12,6 +12,7 @@ import { withStyles } from '@material-ui/core/styles';
 import NotificationsOffIcon from '@material-ui/icons/NotificationsOff';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { MoreVert } from '@material-ui/icons';
+import ClearIcon from '@material-ui/icons/Clear';
 
 
 import "./index.css"
@@ -114,7 +115,7 @@ export default function ActiveChatHeader() {
     setAnchorEl(event.currentTarget);
   };
   const ShowInput = ()=>{
-    setShowinput("block")
+    {showinput === "none" ?  setShowinput("block") :  setShowinput("none")}
   }
 
   const handleMobileMenuClose = () => {
@@ -173,7 +174,7 @@ export default function ActiveChatHeader() {
   );
 
   return (
-    <div className={`${classes.grow} chat_room_header bg-white`} >
+    <div className={`chat_room_header bg-white`} >
       <div>
         <Toolbar>
           <IconButton
@@ -202,9 +203,15 @@ export default function ActiveChatHeader() {
             <form className="d-flex justify-content-start">
               <input  placeholder="Search messages or users" style={{display:showinput}} className="rounded ml-2 p-1 bg-transparent" />
               <IconButton onClick={ShowInput}>
-                <SearchIcon  className="text-muted" />
+                  {showinput === "none" ? <SearchIcon  className="text-muted" /> : <ClearIcon  className="text-muted" /> }
               </IconButton>
             </form>
+            <IconButton onClick={handleMenuClose} className="text-muted">
+               <NotificationsOffIcon/>
+            </IconButton>
+            <IconButton onClick={handleMenuClose} className="text-muted">
+             <DeleteIcon/>
+            </IconButton>
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -213,7 +220,7 @@ export default function ActiveChatHeader() {
               onClick={handleProfileMenuOpen}
             
             >
-              <MoreVert />
+            <MoreVert />
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
