@@ -35,6 +35,10 @@
 .recent-chat-box{
     height: 8vh;
 }
+.recent-chat-box:hover{
+    background-color: #e6ebf5;
+    cursor: pointer;
+}
 @media only screen and (max-width: 769px) {
     .recent-chat-box{
         height: 10vh;

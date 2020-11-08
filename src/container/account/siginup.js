@@ -6,9 +6,7 @@ import "./index.css";
 
 
 function Signup() {
-    var [Alert, setAlert] = useState("hi")
-    var [displayStatus, setDisplay] = useState("none")
-
+    let [sendToLogin, setLogin] = useState(false)
     let [user, setUser] = useState({
         password: '',
         email : '',
@@ -30,24 +28,21 @@ function Signup() {
       fetch('http://localhost:5000/signup', payload)
           .then(response => response.json())
           .then((data)=>{
-            setAlert(data.message)
-            setDisplay("block")
-            if(data.success == true){
-              localStorage.setItem("user", JSON.stringify (data.customer) )
-              localStorage.setItem("token", JSON.stringify (data.customer.api_key) )
-              window.location.reload()
-            }
+            if(data.success){
+              setLogin(true)
+            }else{
+              alert(data.message)
+            } 
+
           });
-        
      }
-     if(localStorage.getItem("token")){
-        return <Redirect to="/" />
+     if(sendToLogin){
+        return <Redirect to="/login" />
      }
       return (
         <Fragment>
-                <div className="container ">
+                <div className="container">
                     <div className="account-contain">
-
                     <div className="row shadow" >
                        <div className="col-md-6 p-4">
                             <img className="w-100-per" src={Assets.Accountimage} />
@@ -62,9 +57,10 @@ function Signup() {
                                 You are gonna connect to world
                               </h3>
                             </center>
-                           <form onSubmit={SignupForm}>
-                                <input onChange={handleChange} name="name"  placeholder="Full name" type="email" className=" bg-light mt-4 p-2 border-bottom form-control"  />
-                                <input onChange={handleChange} name="email"  placeholder="Email@example.com" type="email" className=" bg-light mt-4 p-2 border-bottom form-control"  />
+                           <form onSubmit={SignupForm} className="p-4">
+                                <input onChange={handleChange} name="name"  placeholder="Full name" type="text" className=" bg-light mt-4 p-2 border-bottom form-control"  />
+                                <input onChange={handleChange} name="email"  placeholder="Email@example.com" type="email" className=" bg-light mt-2 p-2 border-bottom form-control"  />
+                                <input onChange={handleChange}  name="avatar" placeholder="Your Avatar link " type="text" className=" bg-light mt-2 p-2 border-bottom form-control"   />
                                 <input onChange={handleChange}  name="password" placeholder="Password " type="password" className=" bg-light mt-2 p-2 border-bottom form-control"   />
                                 <br/>
                                 

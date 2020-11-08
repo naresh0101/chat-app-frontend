@@ -37,7 +37,7 @@ export default function RecentChat() {
 
   return (
     <Fragment>
-          <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+          <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -66,7 +66,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -95,7 +95,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -124,7 +124,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -153,7 +153,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -182,7 +182,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -211,7 +211,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -240,7 +240,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -269,7 +269,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -298,7 +298,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -327,7 +327,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"
@@ -356,7 +356,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between p-2 border-bottom-1 recent-chat-box">
+        <div className="d-flex justify-content-between p-2 recent-chat-box">
           <div className="d-flex justify-content-start">
               <StyledBadge
               overlap="circle"

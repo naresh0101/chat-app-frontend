@@ -30,12 +30,13 @@ function Login() {
       fetch('http://localhost:5000/login', payload)
           .then(response => response.json())
           .then((data)=>{
-            setAlert(data.message)
-            setDisplay("block")
-            if(data.success == true){
-              localStorage.setItem("user", JSON.stringify (data.customer) )
-              localStorage.setItem("token", JSON.stringify (data.customer.api_key) )
+            if(data.success){
+              console.log(data);
+              localStorage.setItem("user", JSON.stringify (data.user) )
+              localStorage.setItem("token", JSON.stringify (data.user.api_key) )
               window.location.reload()
+            }else{
+              alert(data.message)
             }
           });
         
