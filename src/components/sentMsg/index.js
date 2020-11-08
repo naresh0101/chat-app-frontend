@@ -22,7 +22,7 @@ export default function SentMsg() {
     };
   return (
     <Fragment>
-        <div className="mt-2 d-flex align-items-end flex-column bd-highlight">
+        <div className="m-2 d-flex align-items-end flex-column bd-highlight">
             <Avatar alt="Naresh"   src="https://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
             <div className="d-flex justify-content-start">
                 <div>

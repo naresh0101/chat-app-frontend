@@ -10,16 +10,15 @@ import "./index.css"
 export default function Chating() {
   return (
     <Fragment>
-        <YouConnectedOn />
-        <ReceiveMeg />
-        <SentMsg />
-        <ReceiveMeg />
-        <ReceiveMeg />
-        <SentMsg />
-        <SentMsg />
-        <SentMsg />
+          <YouConnectedOn />
+          <ReceiveMeg />
+          <ReceiveMeg />
+          <ReceiveMeg />
+          <ReceiveMeg />
+          <SentMsg />
+          <SentMsg />
 
-
+          <SentMsg />
     </Fragment>
   )
 

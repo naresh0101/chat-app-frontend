@@ -1,18 +1,14 @@
-.MuiAppBar-colorPrimary{
-    background-color: transparent !important;
-    color: gray;
-}
-.MuiPaper-elevation4{
-    box-shadow: none !important;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.486);
-    padding-top: 10px;
-    padding-bottom: 10px;
 
+.chat_room_header{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.486);
+    width: 100%;
 }
-.focus-none:focus{
-    outline: none !important;
-}
-.MuiToolbar-gutters{
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-}
+
+::-webkit-scrollbar{
+    width: 6px !important;
+    height: 20px !important;
+  }
+  ::-webkit-scrollbar-thumb{
+  background-color: rgb(202, 195, 195) !important;
+  border-radius: 20px !important;
+  }

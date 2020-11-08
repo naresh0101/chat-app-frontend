@@ -1,6 +1,5 @@
 import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
@@ -174,8 +173,8 @@ export default function ActiveChatHeader() {
   );
 
   return (
-    <div className={classes.grow}>
-      <AppBar position="static">
+    <div className={`${classes.grow} chat_room_header bg-white`} >
+      <div>
         <Toolbar>
           <IconButton
             edge="start"
@@ -183,7 +182,7 @@ export default function ActiveChatHeader() {
           
             aria-label="open drawer"
           >
-          <Avatar alt="Naresh Kumar Gautam" className="focus-none" src="https://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
+          <Avatar alt="Naresh Kumar Gautam" className="focus-none mx-2" src="https://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
           </IconButton>
           <p className="globle-tile chatby">
             Naresh Kumar Gautam
@@ -229,7 +228,7 @@ export default function ActiveChatHeader() {
             </IconButton>
           </div>
         </Toolbar>
-      </AppBar>
+      </div>
       {renderMobileMenu}
       {renderMenu}
     </div>

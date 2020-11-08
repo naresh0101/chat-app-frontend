@@ -1,8 +1,7 @@
-import React  from "react";
+import React, { Fragment }  from "react";
 import { Avatar } from "@material-ui/core";
 import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
-import Icons from "../../assets"
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -37,8 +36,9 @@ const StyledBadge = withStyles((theme) => ({
 export default function RecentChat() {
 
   return (
-      <div>
-          <h5 className="text-gray globle-tile m-4">Recent</h5>
+      <Fragment>
+      <div className="recent-chats overflow-auto">
+         
           <div className="d-flex justify-content-between recent-chat-box p-2 border-bottom-1 bg-white ">
           <div className="d-flex justify-content-start">
               <StyledBadge
@@ -160,140 +160,7 @@ export default function RecentChat() {
               </div>
             </div>
         </div>
-        <div className="d-flex justify-content-between recent-chat-box p-2 border-bottom-1 bg-white">
-          <div className="d-flex justify-content-start">
-              <StyledBadge
-              overlap="circle"
-              anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'right',
-              }}
-              variant="dot"
-              >
-              <Avatar alt="Naresh Kumar Gautam" className="m-2" src="https://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
-              </StyledBadge>
-              
-              <div className="mt-2">
-                <p className="globle-tile chatby">
-                   Naresh
-                </p>
-                <p className="text-muted last-chat">
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="time">
-                10:29
-              </div>
-              <div className="noti pt-1 mt-2 text-center">
-                  2
-              </div>
-            </div>
-        </div>
-        <div className="d-flex justify-content-between recent-chat-box p-2 border-bottom-1 bg-white">
-          <div className="d-flex justify-content-start">
-              <StyledBadge
-              overlap="circle"
-              anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'right',
-              }}
-              variant="dot"
-              >
-              <Avatar alt="Naresh Kumar Gautam" className="m-2" src="https://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
-              </StyledBadge>
-              
-              <div className="mt-2">
-                <p className="globle-tile chatby">
-                   Naresh
-                </p>
-                <p className="text-muted last-chat">
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="time">
-                10:29
-              </div>
-              <div className="noti pt-1 mt-2 text-center">
-                  2
-              </div>
-            </div>
-        </div>
-        <div className="d-flex justify-content-between recent-chat-box p-2 border-bottom-1 bg-white">
-          <div className="d-flex justify-content-start">
-              <StyledBadge
-              overlap="circle"
-              anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'right',
-              }}
-              variant="dot"
-              >
-              <Avatar alt="Naresh Kumar Gautam" className="m-2" src="https://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
-              </StyledBadge>
-              
-              <div className="mt-2">
-                <p className="globle-tile chatby">
-                   Naresh
-                </p>
-                <p className="text-muted last-chat">
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="time">
-                10:29
-              </div>
-              <div className="noti pt-1 mt-2 text-center">
-                  2
-              </div>
-            </div>
-        </div>
-        <div className="d-flex justify-content-between recent-chat-box p-2 border-bottom-1 bg-white">
-          <div className="d-flex justify-content-start">
-              <StyledBadge
-              overlap="circle"
-              anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'right',
-              }}
-              variant="dot"
-              >
-              <Avatar alt="Naresh Kumar Gautam" className="m-2" src="https://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
-              </StyledBadge>
-              
-              <div className="mt-2">
-                <p className="globle-tile chatby">
-                   Naresh
-                </p>
-                <p className="text-muted last-chat">
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                  okay bhai Acha kl kaha pr tha bhai  ane ghrr pr 
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="time">
-                10:29
-              </div>
-              <div className="noti pt-1 mt-2 text-center">
-                  2
-              </div>
-            </div>
-        </div>
-        
-        
       </div>
+      </Fragment>
   )
 } 
