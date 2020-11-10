@@ -9,9 +9,10 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
+import {connect} from "react-redux"
 
-export default function ReceiveMsg() {
-    const [msgSent ] = useState("") 
+
+function ReceiveMsg({chatingto,chat}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -23,16 +24,18 @@ export default function ReceiveMsg() {
     };
   return (
     <Fragment>
-            <Avatar alt="Naresh" className="m-2"  src="https://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
+            <Avatar alt="Naresh" className="m-2"  src={"h"} />
             <div className="d-flex justify-content-start">
                 <div className="msg-box-receive p-2 m-2">                    
                     <div>
-                        hello naresh kesa hai bro !
-                        hello naresh kesa hai bro !
+                       {chat.message}
                     </div>
 
                     <div className="time text-muted mt-1">
-                        <AccessTimeIcon className="watch-icon mr-1"/>00:22 A.M
+                        <AccessTimeIcon className="watch-icon mr-1"/>
+                        <div>
+                        {chat.time}
+                        </div>
                     </div>
                 </div>
                 <div >
@@ -58,8 +61,11 @@ export default function ReceiveMsg() {
                     </Menu>
                 </div>
             </div>
-       
     </Fragment>
   )
 
 }
+const mapStateToProps = state => ({ 
+    chatingto : state.userReducer
+})
+export default connect(mapStateToProps,null)(ReceiveMsg);

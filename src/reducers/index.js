@@ -1,6 +1,12 @@
 import { combineReducers } from "redux";
-import messageReducer from "./msgReducer";
+import searchReducer from "./searchReducer";
+import MsgReducer from "./msgReducer";
+import userReducer from "./userReducer";
+
 
 export default combineReducers({
-    messageReducer : messageReducer
+    searchReducer : searchReducer,
+    MsgReducer : MsgReducer,
+    userReducer : userReducer
+
 })

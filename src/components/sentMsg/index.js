@@ -10,7 +10,9 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 
-export default function SentMsg() {
+function SentMsg({chat}) {
+    const user = JSON.parse(localStorage.getItem("user"))
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -23,9 +25,9 @@ export default function SentMsg() {
   return (
     <Fragment>
         <div className="m-2 d-flex align-items-end flex-column bd-highlight">
-            <Avatar alt="Naresh"   src="https://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
+            <Avatar alt={user.name}   src={user.avatar} />
             <div className="d-flex justify-content-start">
-                <div>
+                    <div style={{marginRight:"-20px"}}>
                     <IconButton
                         aria-label="more"
                         aria-controls="long-menu"
@@ -49,12 +51,13 @@ export default function SentMsg() {
                 </div>
                 <div className="msg-box-sent p-2 m-2">
                     <div>
-                        hello naresh kesa hai Ok !
+                       {chat.message}
                     </div>
 
                     <div className="time text-white float-right">
                         <AccessTimeIcon className="watch-icon mr-1"/>
-                        00:22 A.M
+                       {chat.time}
+                       09:30
                     </div>
                 </div>
             </div>
@@ -63,3 +66,6 @@ export default function SentMsg() {
   )
 
 }
+
+export default SentMsg;
+  

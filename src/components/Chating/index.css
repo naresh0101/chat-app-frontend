@@ -1,11 +1,11 @@
 .mecntd{
-    margin-left: -10px !important;
+    margin-right: -10px !important;
 }
 .cnctd-msg{
     font-size: 12px;
 }
 .msg-box-receive{
-    width: 40vh;
+    /* width: 40vh; */
     background-color: #e6ebf5;
     color: #475b7a;
     border-top-right-radius: 16px ;
@@ -14,12 +14,15 @@
 }
 
 .msg-box-sent{
-    width: 40vh;
+    /* width: 40vh; */
     background-color: rgb(0 123 255 / 67%);
     color: white;
     border-top-left-radius: 16px ;
     border-bottom-left-radius: 16px ;
     border-bottom-right-radius: 16px ;
+}
+.more-btn{
+    margin-right: -20px;
 }
 .watch-icon{
     font-size: 16px !important;
@@ -36,11 +39,21 @@
     height: 8vh;
 }
 .recent-chat-box:hover{
-    background-color: #e6ebf5;
-    cursor: pointer;
+   background-color: rgba(206, 206, 219, 0.397);
+}
+.selectuser{
+    background-color: transparent !important;
+    border: none;
+    width: 100%;
+}
+.selectuser:focus{
+    outline: none !important;
 }
 @media only screen and (max-width: 769px) {
     .recent-chat-box{
         height: 10vh;
     }
   }
+a{
+    text-decoration: none !important;
+}

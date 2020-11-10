@@ -13,6 +13,7 @@ import NotificationsOffIcon from '@material-ui/icons/NotificationsOff';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { MoreVert } from '@material-ui/icons';
 import ClearIcon from '@material-ui/icons/Clear';
+import {connect} from "react-redux"
 
 
 import "./index.css"
@@ -86,7 +87,7 @@ const StyledBadge = withStyles((theme) => ({
       height: '100%',
       borderRadius: '50%',
       animation: '$ripple 1.2s infinite ease-in-out',
-      border: '1px solid currentColor',
+      border: '0.6px solid currentColor',
       content: '""',
     },
   },
@@ -96,13 +97,13 @@ const StyledBadge = withStyles((theme) => ({
       opacity: 2,
     },
     '100%': {
-      transform: 'scale(2.4)',
+      transform: 'scale(6.4)',
       opacity: 0,
     },
   },
 }))(Badge);
 
-export default function ActiveChatHeader() {
+function ActiveChatHeader({chatingto}) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -160,7 +161,7 @@ export default function ActiveChatHeader() {
     >
       <MenuItem>
         <IconButton>
-          <NotificationsOffIcon className="focus-none" />
+          <NotificationsOffIcon />
         </IconButton>
         <p>Mute</p>
       </MenuItem>
@@ -180,24 +181,23 @@ export default function ActiveChatHeader() {
           <IconButton
             edge="start"
             className={classes.menuButton}
-          
             aria-label="open drawer"
           >
-          <Avatar alt="Naresh Kumar Gautam" className="focus-none mx-2" src="https://media-exp1.licdn.com/dms/image/C4E03AQGlgtNGw1YVXw/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=AOiO0z1jN852hQhG-Ntf3ZFKO3swifQkEaiY9YQroAg" />
           </IconButton>
-          <p className="globle-tile chatby">
-            Naresh Kumar Gautam
-          </p>
           <StyledBadge
-            className="mx-2"
               overlap="circle"
               anchorOrigin={{
-                  vertical: 'bottom',
+                  vertical: 'top',
                   horizontal: 'right',
               }}
               variant="dot"
-              />
-            
+              >
+              <Avatar alt={chatingto.activeChat.name} className="focus-none mx-2 " src={chatingto.activeChat.avatar} />
+            </StyledBadge>
+              <p className="globle-tile m-2 chatby">
+                  {chatingto.activeChat.name}
+              </p>
+          
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <form className="d-flex justify-content-start">
@@ -241,3 +241,7 @@ export default function ActiveChatHeader() {
     </div>
   );
 }
+const mapStateToProps = state => ({ 
+    chatingto : state.userReducer
+})
+export default connect(mapStateToProps,null)(ActiveChatHeader);

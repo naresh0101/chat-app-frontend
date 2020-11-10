@@ -2,3 +2,9 @@ export const SEND_MESSAGE = "SEND_MESSAGE";
 export const RECEIVE_MESSAGE = "RECEIVE_MESSAGE";
 export const DELETE_CHAT = "DELETE_CHAT";
 export const DELETE_MESSAGE = "DELETE_MESSAGE";
+export const SEARCH_USER = "SEARCH_USER";
+export const ALL_USERS = "ALL_USERS";
+export const ACTIVE_USER = "ACTIVE_USER";
+export const ACTIVE_USER_CHATS = "ACTIVE_USER_CHATS";
+
+

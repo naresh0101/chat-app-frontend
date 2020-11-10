@@ -31,7 +31,6 @@ function Login() {
           .then(response => response.json())
           .then((data)=>{
             if(data.success){
-              console.log(data);
               localStorage.setItem("user", JSON.stringify (data.user) )
               localStorage.setItem("token", JSON.stringify (data.user.api_key) )
               window.location.reload()

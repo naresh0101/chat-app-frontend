@@ -6,15 +6,12 @@ import ChatRoom from '../../views/chatRoom';
 
 const Dashboard = () => {
   return (
-      <div>
-           <div className="row">
-           <Sidebar />
-            <Switch>
-              <Route exact path="/" component={ChatRoom} />
-            </Switch>
-           </div>
-
-      </div>
+        <div className="row">
+          <Sidebar />
+          <Switch>
+            <Route exact path="/:id" component={ChatRoom} />
+          </Switch>
+        </div>
   );
 };
 

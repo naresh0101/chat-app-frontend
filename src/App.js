@@ -6,6 +6,7 @@ import Login from './container/account/login';
 import Signup  from './container/account/siginup';
 import Dashboard from './container/dashboard';
 
+
 import { Provider } from "react-redux";
 import store from "./store"
 
@@ -16,7 +17,8 @@ if(localStorage.getItem("token")){
   authenticated = true
 }
 
-function App() {
+export default function App() {
+
   return (
     <Provider store={store}>
       <AppLayout>
@@ -30,5 +32,3 @@ function App() {
     
   );
 }
-
-export default App;

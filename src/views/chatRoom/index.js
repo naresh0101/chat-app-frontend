@@ -3,8 +3,9 @@ import Chating from "../../components/Chating";
 import ActiveChatHeader from "../../components/chatRoomHeader";
 import Mymessage from "../../components/msg";
 
-export default function ChatRoom() {
 
+function ChatRoom() {
+  
   return (
     <div className="col-sm-9 chatroom" >
           <ActiveChatHeader />
@@ -13,3 +14,5 @@ export default function ChatRoom() {
     </div>
   )
 } 
+
+export default ChatRoom;
